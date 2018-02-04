@@ -1,0 +1,56 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Rammetto One', cursive;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    grid-gap: 10px;
+}
+
+div[class^="box"] {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+span {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.random-number {
+    margin: 5% 35% 0 35%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random {
+    font-size: 150px;
+}
+
+.new-random-number {
+    width: 70px;
+    height: 30px;
+}
+
