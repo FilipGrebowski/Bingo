@@ -4,15 +4,17 @@ var arrayN = [];
 var arrayG = [];
 var arrayO = [];
 
+var spawnedNumbers = [];
+
+fillArrayWithNumbers();
+
 function fillArrayWithNumbers() {
     
     for (var i = 0; i < 75; i++) {
     
         var randomNumber = Math.floor(Math.random() * 75) + 1;
 
-        if (arrayB.includes(randomNumber) || arrayI.includes(randomNumber) || arrayN.includes(randomNumber) || arrayG.includes(randomNumber) || arrayO.includes(randomNumber)) {
-            console.log("Number exists.");
-        }
+        if (arrayB.includes(randomNumber) || arrayI.includes(randomNumber) || arrayN.includes(randomNumber) || arrayG.includes(randomNumber) || arrayO.includes(randomNumber)) { void 0; }
         else {
             if (randomNumber >= 1 && randomNumber <= 15 && arrayB.length < 5) {
                 arrayB.push(randomNumber);
@@ -64,53 +66,15 @@ function populateSquares() {
     }
 }
 
-//var array = [];
-//var number = [];
-//   
-//function fillWithRandomNumbers() {
-//
-//    for (var i = 5; i <= 50; i++) {
-//
-//        var randomNumber = Math.floor(Math.random() * 75) + 1;
-//
-//        if (array.length != 25) {
-//            if (array.includes(randomNumber)) {
-//                continue;
-//            }
-//            else {
-//                array.push(randomNumber);
-//            }
-//        }
-//        else {
-//            break;
-//        }
-//    }
-//
-//    for (var i = 1; i <= array.length; i++) {
-//        var div = document.querySelector('.span' + i);
-//        div.innerHTML += array[i - 1];
-//        
-//        
-//    }
-//}
-//
-//function printNumber() {
-//    document.querySelector('.random-number-text').textContent = '';
-//    var randomNumber = Math.floor(Math.random() * 75) + 1;
-//    
-//    if (number.includes(randomNumber)) {
-//        console.log("Number exists.");
-//    }
-//    else {
-//        document.querySelector('.random-number-text').innerHTML += randomNumber;
-//        number.push(randomNumber);
-//        console.log(number);
-//    }
-//    
-//    if (array.includes(randomNumber)) {
-//        var index = array.indexOf(randomNumber) + 1;
-//        document.querySelector('.box' + index).style.backgroundColor = 'red';
-//    }
-//}
-//
-//fillWithRandomNumbers();
+document.querySelector('.start-button').addEventListener('click', function() {
+    
+    var randomNumber = Math.floor(Math.random() * 75) + 1;
+    
+    document.querySelector('.start-button').style.display = 'none';
+    var obj = document.createElement('div');
+    obj.id = "display-number";
+    document.querySelector('.button-div').appendChild(obj);
+    
+    document.querySelector('.button-div').innerHTML = randomNumber; 
+    
+});
