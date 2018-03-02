@@ -18,39 +18,58 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 120px);
+    grid-template-columns: repeat(5, 80px);
     grid-gap: 10px;
 }
 
-div[class^="box"] {
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-span {
+div[class^="tbox-"] {
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
-}
-
-.random-number {
-    margin: 5% 35% 0 35%;
-    height: 200px;
+    background-color: mediumpurple;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.random {
-    font-size: 150px;
+div[class^="box"] {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background: linear-gradient(#6495ED, #4169E1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.new-random-number {
+span {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+#star {
+    width: 80px;
+    height: 80px;
+}
+
+#star-box {
+    background: white;
+}
+
+/* The div that the button is in. */
+.button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The button for random number */
+.random-number-button {
+    margin-top: 20px;
     width: 70px;
     height: 30px;
 }
-

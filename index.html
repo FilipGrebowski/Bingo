@@ -8,10 +8,14 @@
       <link href="https://fonts.googleapis.com/css?family=Rammetto+One|Roboto" rel="stylesheet">
   </head>
   <body>
-      <h1 id="title">Bingo</h1>
       <div class="wrapper">
           <div class="container">
-              <div class="box1"><span class="span1" onclick="tickNumber()"></span></div>
+              <div class="tbox-B"><span></span>B</div>
+              <div class="tbox-I"><span></span>I</div>
+              <div class="tbox-N"><span></span>N</div>
+              <div class="tbox-G"><span></span>G</div>
+              <div class="tbox-O"><span></span>O</div>
+              <div class="box1"><span class="span1"></span></div>
               <div class="box2"><span class="span2"></span></div>
               <div class="box3"><span class="span3"></span></div>
               <div class="box4"><span class="span4"></span></div>
@@ -23,7 +27,12 @@
               <div class="box10"><span class="span10"></span></div>
               <div class="box11"><span class="span11"></span></div>
               <div class="box12"><span class="span12"></span></div>
-              <div class="box13"><span class="span13"></span></div>
+              
+              <div class="box13" id="star-box">
+                  <span class="span13"></span>
+                  <img src="img/star.png" id="star" alt="Star">
+              </div>
+              
               <div class="box14"><span class="span14"></span></div>
               <div class="box15"><span class="span15"></span></div>
               <div class="box16"><span class="span16"></span></div>
@@ -38,8 +47,10 @@
               <div class="box25"><span class="span25"></span></div>
           </div>
       </div>
-      <div class="random-number"><span class="random"></span></div>
-      <button class="new-random-number" onclick="printNumber()">Random</button>
+      
+      <div class="button-div">
+        <button class="random-number-button" onclick="fillArrayWithNumbers()">Random</button>
+      </div>
       
   <script src="script.js"></script>
   </body>
