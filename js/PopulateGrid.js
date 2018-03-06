@@ -6,22 +6,22 @@ var arrayN = []; // Numbers 31-45
 var arrayG = []; // Numbers 46-60
 var arrayO = []; // Numbers 61-75
 
-// Instantiates generation and insertion of numbers.
-fillArrayWithNumbers();
 
 // This function loops through and generates a random number
 // between 1-75. The number is checked if it is contained in 
 // any of the column arrays. If it is, nothing happends, if
 // it is not, it gets categorised and pushed into the appropriate
 // array.
-function fillArrayWithNumbers() {
+(function () { // Immediately Invoked Function Expression used.
     
     for (var i = 0; i < 75; i++) {
     
         // Holds random number.
         var randomNumber = Math.floor(Math.random() * 75) + 1;
 
-        if (arrayB.includes(randomNumber) || arrayI.includes(randomNumber) || arrayN.includes(randomNumber) || arrayG.includes(randomNumber) || arrayO.includes(randomNumber)) { void 0; }
+        if (arrayB.includes(randomNumber) || arrayI.includes(randomNumber) || arrayN.includes(randomNumber) || arrayG.includes(randomNumber) || arrayO.includes(randomNumber)) { 
+            void 0; 
+        }
         else {
             if (randomNumber >= 1 && randomNumber <= 15 && arrayB.length < 5) {
                 arrayB.push(randomNumber);
@@ -42,7 +42,7 @@ function fillArrayWithNumbers() {
     }
     // Calls the populateSquares() function.
     populateSquares();
-}
+})();
 
 // This function runs through every square of the bingo board,
 // and displays the matched number from the appropriate array.

@@ -8,8 +8,8 @@ document.querySelector('.start-button').addEventListener('click', function() {
     var randomNumber = Math.floor(Math.random() * 75) + 1;
     
     document.querySelector('.start-button').style.display = 'none';
-    document.querySelector('.no-button').style.display = 'initial';
-    document.querySelector('.yes-button').style.display = 'initial';
+    document.querySelector('.no-button').style.display = 'block';
+    document.querySelector('.yes-button').style.display = 'block';
     
     var obj = document.createElement('div');
     obj.id = "display-number";
